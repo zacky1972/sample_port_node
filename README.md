@@ -1,6 +1,6 @@
 # sample_port_node
 
-Sample code Port with communicating between Elixir and C by Node.
+Sample code Port with communicating between Elixir and C or Rust by Node.
 
 ## License
 
