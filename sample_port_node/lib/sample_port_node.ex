@@ -42,9 +42,8 @@ defmodule SamplePortNode do
         :ok
 
       _ ->
-        spawn(fn -> System.cmd("nohup", ["epmd"]) end)
-        Logger.notice("spawn epmd")
-        Process.sleep(100)
+        System.cmd("epmd", ["-daemon"])
+        Logger.notice("epmd -daemon")
 
         case Node.start(@node, :shortnames) do
           {:ok, _pid} -> :ok
